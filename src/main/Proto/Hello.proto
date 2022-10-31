@@ -1,0 +1,16 @@
+syntax="proto3";
+package gfc.helloGRPC;
+option java_multiple_files = true;
+
+
+service helloGRPC{
+  rpc Hello( request) returns (response);
+  rpc Bye( request) returns (response);
+}
+
+message request{
+  string name=1;
+}
+message response{
+  string reply=1;
+}
